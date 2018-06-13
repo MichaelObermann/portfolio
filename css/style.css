@@ -1,0 +1,217 @@
+body{
+    font-family: Open_Sans;
+    margin: 0;
+    background-color: white;
+    color: #868e96;
+    font-size: 1.2em;
+}
+.marginRowNone{
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+@font-face{
+    font-family: "Open_Sans";
+    src:url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: "Saira_Extra_Condensed";
+    src:url('../fonts/Saira_Extra_Condensed/SairaExtraCondensed-Regular.ttf') format('truetype');
+}
+#sectionMenu{ /*s'applique à l'id sectionMenu*/
+    width:100%;
+    margin:auto;
+    padding-bottom: 80px;
+}
+.divtop{
+    padding-top: 70px
+}
+.divtopHome{
+    padding-top: 150px;
+}
+.divbot{
+    padding-bottom: 25px;
+}
+nav{
+    position: fixed;
+    width:100%;
+    z-index: 100;
+}
+.navHome{
+    width: 100%;
+}
+nav ul{ /*s'applique aux balises <ul> dans le <nav>*/
+    display:flex;
+    padding:0;
+    justify-content: center;
+    margin:0;
+    list-style-type: none; /*vire les puce*/
+    background-color: #343a40;
+}
+nav li{ /*s'applique aux balises <li> dans le <nav>*/
+    width: 50%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+nav a{ /*s'applique aux balises <a> dans le <nav>*/
+    display: block;
+    text-decoration: none; /*vire le soulignage*/
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right:10px;
+}
+nav a:hover{ /*s'applique quand on passe dessus une balise <a> dans le <nav>*/
+    background-color: #212529;
+    transition: all .4s;
+    text-decoration: none;
+    color: white
+}
+.navactive{
+    color: #00a7b5;
+}
+.mid{
+    position:absolute;
+    display:block;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.displayBlock{
+    display: inline-block; 
+    width: 100%;
+}
+.divdroite{
+    float: right;
+    text-align: right;
+}
+.divgauche{
+    float: left;
+    text-align: left;
+    margin-bottom: 50px;
+}
+.centre{
+    justify-content: center;
+}
+.txtcentre{
+    text-align: center;
+}
+.justify{
+    text-align: justify;
+}
+.txtgauche{
+    text-align: left;
+}
+.txtrose{
+    color: #00a7b5;
+}
+.txtnoir{
+    color: #343a40;
+}
+.txtblanc{
+    color: white;
+}
+.gras{
+    font-weight: 700;
+}
+.Saira{
+    font-family: Saira_Extra_Condensed;
+}
+.big{    
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 5.5rem;
+}
+.medium{
+    font-size: 2.5em;
+}
+hr{
+    background-color:#00a7b5;
+}
+.div-image-projets{
+    margin-bottom: 30px;
+}
+.imgTaille{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.imgContainer{
+    position: relative;
+    display: block;
+    width:100%;
+    height:100%;
+}
+.imgContainer>div{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: #00a7b5;
+    opacity: 0;
+    transition: all .3s;
+}
+.imgContainer:hover>div{
+    opacity: 0.9;
+}
+.textHover{
+    color: white;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.effet3DHover:hover{
+    box-shadow: 5px 5px 10px #888888;
+    opacity:1;
+    border-radius: 15px;
+}
+.darkerHover:hover{
+    opacity:0.7;
+}
+.boutonsAccueil{
+    width: 13em;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+nav .fas{
+    line-height: 80px!important;
+}
+.tailleBox{
+    height: 147px;
+}
+.boutonEnvoyer, .boutonEnvoyer:active, .boutonEnvoyer:visited .boutonEnvoyer:focus{
+    background-color: #00a7b5!important;
+    border-color: #00a7b5!important;
+    box-shadow: none!important;
+}
+.boutonEnvoyer:hover{
+    background-color: #00a7b5!important;
+    border-color: #00a7b5!important;
+    opacity:0.7!important;
+}
+.g-recaptcha{
+    display:inline-block;
+}
+.imgProjets{
+    color: #343a40;
+    background-color: white;
+    border-color: #343a40;
+    width: 100%;
+    height:100%;
+    text-align: center;
+}
+.sansPuces{
+    list-style-type: none;
+}
+@media screen and (max-width:991px){
+    .date{
+        float: none;
+        text-align: left;
+    }
+}
