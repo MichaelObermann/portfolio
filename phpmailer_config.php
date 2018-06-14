@@ -20,14 +20,14 @@ try {
             'allow_self_signed' => true
         )
     );
-    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output mettre une valeur de 4 pour que le serveur renvoie les erreurs rencontrées, sinon 0
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'XXXX';  // Specify main and backup SMTP servers
+    $mail->Host = 'XXXX';  // Specify main and backup SMTP servers - ssl0.ovh.net pour OVH - smtp.gmail.com ou smtp.michaelobermann.fr pour localhost
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = $monMail;                 // SMTP username
     $mail->Password = $monMotDePasse;                           // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted - OVH: mettre ssl, sinon tsl pour localhost c'est ok
+    $mail->Port = 587;                                    // TCP port to connect to - 465 for ssl - 587 for tsl
     //Recipients
     $mail->setFrom($formEmail, 'Mailer');
     $mail->addAddress($monMail);     // Add a recipient
