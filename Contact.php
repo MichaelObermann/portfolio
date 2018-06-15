@@ -48,7 +48,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nom" placeholder="Nom *" pattern='^([A-zÀ-ž\s]){2,}' required>
+                                <input type="text" class="form-control" name="nom" placeholder="Nom & Prénom *" pattern='^([A-zÀ-ž\s]){2,}' required>
                                 <div class="invalid-feedback">
                                     Merci de renseigner votre nom.
                                 </div>
