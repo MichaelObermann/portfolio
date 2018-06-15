@@ -2,7 +2,7 @@
 
 <?php
 //Sujet du mail
-$sujet = "Mon formulaire de contact";
+$sujet = "Prise de contact via le Portfolio";
 //Elements du formulaire
 $formNom = $_POST["nom"];
 $formtelephone = $_POST["telephone"];
@@ -23,12 +23,12 @@ $api_url = "https://www.google.com/recaptcha/api/siteverify?secret="
 $decode = json_decode(file_get_contents($api_url), true);
 
 //Construction du message
-$html_message = "<div>" . $formNom . "</div>";
-$html_message .= "<div>" . $formEmail . "</div>";
-$html_message .= "<div>" . $formtelephone . "</div>";
-$html_message .= "<div>" . $formMessage . "</div>";
+$html_message = "<div>Nom & Prénom : " . $formNom . "</div>";
+$html_message .= "<div>E-mail : " . $formEmail . "</div>";
+$html_message .= "<div>Téléphone : " . $formtelephone . "</div>";
+$html_message .= "<div><br>Message:<br>" . $formMessage . "</div>";
 $monMail = "contact@michaelobermann.fr"; //ici l'adresse mail du compte de l'expéditeur
-$monMotDePasse = "XXX"; //le mdp Gmail du compte mail
+$monMotDePasse = "XXX"; //le mdp du compte mail
 
 if ($decode['success'] == true) {
     // C'est un humain
